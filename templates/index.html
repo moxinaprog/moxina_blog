@@ -1,43 +1,165 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Murakkab Shaxsiy Sayt</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Animatsiya uchun qo'shimcha CSS */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+    .fade-in.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body class="bg-gray-900 text-white font-sans">
 
+  <!-- Header -->
+  <header class="bg-gray-800 shadow-lg fixed w-full z-50">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold tracking-wide">Mening Shaxsiy Saytim</h1>
+      <nav class="space-x-6 text-lg font-medium">
+        <a href="#about" class="hover:text-blue-400">Haqida</a>
+        <a href="#services" class="hover:text-blue-400">Xizmatlar</a>
+        <a href="#portfolio" class="hover:text-blue-400">Portfoliо</a>
+        <a href="#contact" class="hover:text-blue-400">Aloqa</a>
+      </nav>
+    </div>
+  </header>
 
-{% extends 'base.html' %}
-{% block title %}Moxinaning Blogi{% endblock %}
-{% block content %}
+  <!-- Hero section -->
+  <section class="h-screen flex items-center justify-center bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 px-4" style="padding-top: 80px;">
+    <div class="text-center max-w-2xl mx-auto">
+      <h1 class="text-5xl md:text-6xl font-bold mb-4 animate-fade-in">Salom! Men Suxrob</h1>
+      <p class="text-xl mb-8 animate-fade-in" style="animation-delay: 0.2s;">Web dasturchi va dizayner sifatida sizga xizmat qilaman.</p>
+      <a href="#about" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded shadow-lg animate-fade-in" style="animation-delay: 0.4s;">Batafsil</a>
+    </div>
+  </section>
 
-<!-- Hero Section -->
-<section class="text-center py-20">
-  <h1 class="text-5xl font-extrabold mb-4">Salom! Men <span class="text-pink-600">Moxina</span>man 👋</h1>
-  <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-    Men web dizayner va dasturchiman. Ushbu shaxsiy blog orqali ishlarim, ilhomlarim va tajribam bilan bo‘lishaman.
-  </p>
-  <a href="#posts" class="mt-6 inline-block bg-pink-600 text-white px-6 py-3 rounded-full shadow hover:bg-pink-700 transition">
-    Ishlarimni ko‘rish →
-  </a>
-</section>
+  <!-- About -->
+  <section id="about" class="max-w-7xl mx-auto px-4 py-16 bg-gray-800" style="margin-top: -60px;">
+    <div class="text-center mb-12">
+      <h2 class="text-4xl font-bold mb-4">Men Haqimda</h2>
+      <p class="max-w-2xl mx-auto text-lg text-gray-300">Men web saytlar, mobil ilovalar va dizaynlar yaratishda professional bo'lgan dasturchiman. Mijozlar bilan ishlash va innovatsion yechimlar topish meni ilhomlantiradi.</p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-8 text-center">
+      <div class="bg-gray-700 p-6 rounded hover:scale-105 transition-transform duration-300 shadow-lg fade-in" style="animation-delay:0.2s;">
+        <h3 class="text-xl font-semibold mb-2">Tajribam</h3>
+        <p>5+ yillik tajriba, zamonaviy texnologiyalar bilan ishlash.</p>
+      </div>
+      <div class="bg-gray-700 p-6 rounded hover:scale-105 transition-transform duration-300 shadow-lg fade-in" style="animation-delay:0.4s;">
+        <h3 class="text-xl font-semibold mb-2">Qobiliyatlar</h3>
+        <p>HTML, CSS, JavaScript, React, Vue, Node.js, Photoshop va boshqa vositalar.</p>
+      </div>
+      <div class="bg-gray-700 p-6 rounded hover:scale-105 transition-transform duration-300 shadow-lg fade-in" style="animation-delay:0.6s;">
+        <h3 class="text-xl font-semibold mb-2">Maqsad</h3>
+        <p>Har doim yangi texnologiyalarni o'rganib, mijozlar uchun eng yaxshi yechimlarni taqdim etish.</p>
+      </div>
+    </div>
+  </section>
 
-<!-- About me -->
-<section class="bg-white p-10 rounded-2xl shadow max-w-4xl mx-auto my-10 text-center">
-  <h2 class="text-3xl font-bold mb-4">Men haqimda</h2>
-  <p class="text-gray-700 text-lg">
-    Men O‘zbekistonlik yosh dizayner va web dasturchiman. Vizual san’at va texnologiyani uyg‘unlashtirib, estetik jihatdan chiroyli va funksional saytlar yaratishni yoqtiraman. Tajribam davomida flayer, vizitka, portfolio sahifalari ustida ishlaganman.
-  </p>
-</section>
+  <!-- Services -->
+  <section id="services" class="max-w-7xl mx-auto px-4 py-16 bg-gray-900">
+    <h2 class="text-4xl font-bold mb-8 text-center">Xizmatlarim</h2>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="bg-gray-800 p-6 rounded hover:shadow-xl transition-shadow duration-300 fade-in" style="animation-delay:0.2s;">
+        <h3 class="text-2xl font-semibold mb-4">Veb Saytlar</h3>
+        <p class="mb-4">Zamonaviy, responsive va SEO mos veb saytlar yarataman.</p>
+        <ul class="list-disc list-inside text-gray-300">
+          <li>Shaxsiy portfoliolar</li>
+          <li>Biznes saytlar</li>
+          <li>Online do'konlar</li>
+        </ul>
+      </div>
+      <div class="bg-gray-800 p-6 rounded hover:shadow-xl transition-shadow duration-300 fade-in" style="animation-delay:0.4s;">
+        <h3 class="text-2xl font-semibold mb-4">Dizayn</h3>
+        <p class="mb-4">Logo, banner, UI/UX dizaynlarni yarataman.</p>
+        <ul class="list-disc list-inside text-gray-300">
+          <li>Grafik dizayn</li>
+          <li>Mobil ilova dizayni</li>
+          <li>Web interface dizayni</li>
+        </ul>
+      </div>
+      <div class="bg-gray-800 p-6 rounded hover:shadow-xl transition-shadow duration-300 fade-in" style="animation-delay:0.6s;">
+        <h3 class="text-2xl font-semibold mb-4">Mijozlar uchun qo'llab-quvvatlash</h3>
+        <p class="mb-4">Muntazam texnik yordam va yangilashlar.</p>
+        <ul class="list-disc list-inside text-gray-300">
+          <li>Sayt optimizatsiyasi</li>
+          <li>Yangi funksiyalar qo'shish</li>
+          <li>Qo'llanma va maslahatlar</li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
-<!-- Posts Section -->
-<section id="posts" class="mt-20">
-  <h2 class="text-4xl font-bold mb-8 text-center">Mening Loyihalarim</h2>
+  <!-- Portfolio -->
+  <section id="portfolio" class="max-w-7xl mx-auto px-4 py-16 bg-gray-800">
+    <h2 class="text-4xl font-bold mb-12 text-center">Portfoliom</h2>
+    <div class="grid md:grid-cols-3 gap-8">
+      <!-- Birinchi loyiha -->
+      <div class="relative group rounded overflow-hidden shadow-lg fade-in" style="animation-delay:0.2s;">
+        <img src="https://images.unsplash.com/photo-1542291026-7eec265e6d51?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Loyiha 1" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"/>
+        <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
+          <p class="text-xl font-semibold">Loyiha 1</p>
+        </div>
+      </div>
+      <!-- Ikkinchi loyiha -->
+      <div class="relative group rounded overflow-hidden shadow-lg fade-in" style="animation-delay:0.4s;">
+        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Loyiha 2" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"/>
+        <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
+          <p class="text-xl font-semibold">Loyiha 2</p>
+        </div>
+      </div>
+      <!-- Uchinchi loyiha -->
+      <div class="relative group rounded overflow-hidden shadow-lg fade-in" style="animation-delay:0.6s;">
+        <img src="https://images.unsplash.com/photo-1523413651479-597eb2da0ad6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Loyiha 3" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"/>
+        <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
+          <p class="text-xl font-semibold">Loyiha 3</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-    {% for post in posts %}
-    <a href="{{ url_for('post_detail', post_id=post.id) }}"
-       class="block bg-white rounded-2xl shadow hover:shadow-lg transition duration-300 p-6 space-y-2 border border-gray-200">
-       
-       <h3 class="text-2xl font-bold text-gray-900">{{ post.title }}</h3>
-       <p class="text-sm text-gray-500">{{ post.created.strftime('%Y-%m-%d') }}</p>
-       <p class="text-gray-700">{{ post.content[:100] }}...</p>
-    </a>
-    {% endfor %}
-  </div>
-</section>
+  <!-- Contact -->
+  <section id="contact" class="max-w-7xl mx-auto px-4 py-16 bg-gray-900">
+    <h2 class="text-4xl font-bold mb-8 text-center">Aloqa</h2>
+    <div class="max-w-3xl mx-auto bg-gray-800 p-8 rounded shadow-lg">
+      <form id="contactForm" class="flex flex-col space-y-4">
+        <input type="text" placeholder="Ismingiz" class="p-3 rounded bg-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"/>
+        <input type="email" placeholder="Email" class="p-3 rounded bg-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"/>
+        <textarea placeholder="Xabar" rows="5" class="p-3 rounded bg-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+        <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded shadow-lg">Yuborish</button>
+      </form>
+      <div id="formResponse" class="mt-4 text-green-400"></div>
+    </div>
+  </section>
 
-{% endblock %}
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-center py-4 mt-8">
+    &copy; 2024 Suxrob. Barcha huquqlar himoyalangan.
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    // Animatsiya uchun
+    document.querySelectorAll('.fade-in').forEach((el, index) => {
+      setTimeout(() => {
+        el.classList.add('show');
+      }, 200 * (index + 1));
+    });
+
+    // Kontakt forma
+    document.getElementById('contactForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      document.getElementById('formResponse').innerText = 'Xabar yuborildi! Tez orada siz bilan bog\'lanamiz.';
+      this.reset();
+    });
+  </script>
+</body>
+</html>
