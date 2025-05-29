@@ -1,50 +1,49 @@
+:root {
+    --primary-color: #f8a3cf; /* asosiy rang, masalan, pushti */
+    --accent-color: #cb4b88; /* urg‘u rang, masalan, qizil */
+    --hover-color: #ffeceb; /* hover rang */
+    --background-body: #f8a3cf; /* umumiy fon uchun */
+    --nav-background: #fff0eb;
+    --footer-background: #fff7f4;
+    --text-color: #2b2b2b; /* asosiy matn rangi */
+    --link-color: #cb4b88; /* havola ranglari */
+    --link-hover-color: #a3326a;
+    --button-background: #cb4b88;
+    --button-hover-background: #a3326a;
+}
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #f8a3cf;
-    color: #2b2b2b;
+    background-color: var(--background-body);
+    color: var(--text-color);
 }
 
 a {
-    color: #cb4b88;
-    text-decoration: none;
+    color: var(--link-color);
 }
 a:hover {
-    color: #a3326a;
-    text-decoration: underline;
+    color: var(--link-hover-color);
 }
 
 nav {
-    background-color: #fff0eb;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-    border-bottom: 1px solid #f1dada;
+    background-color: var(--nav-background);
 }
 
 footer {
-    background-color: #fff7f4;
-    color: #6b6b6b;
+    background-color: var(--footer-background);
 }
 
 .card {
-    background-color: #f8a3cf;
-    border: 1px solid #f8a3cf;
-    border-radius: 18px;
-    transition: all 0.3s ease;
+    background-color: var(--primary-color);
+    border: 1px solid var(--primary-color);
 }
 
 .card:hover {
-    background-color: #ffeceb;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.05);
+    background-color: var(--hover-color);
 }
 
 button, .btn {
-    background-color: #cb4b88;
-    color: #f8a3cf;
-    padding: 10px 20px;
-    border-radius: 10px;
-    border: none;
-    font-weight: bold;
-    transition: 0.3s;
+    background-color: var(--button-background);
 }
 button:hover, .btn:hover {
-    background-color: #a3326a;
+    background-color: var(--button-hover-background);
 }
