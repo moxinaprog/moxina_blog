@@ -16,6 +16,9 @@
       opacity: 1;
       transform: translateY(0);
     }
+      .custom-filter {
+    filter: hue-rotate(180deg) brightness(1.2) saturate(1.5);
+  }
   </style>
 </head>
 <body class="bg-gray-900 text-white font-sans">
@@ -99,33 +102,32 @@
   </section>
 
   <!-- Portfolio -->
-  <section id="portfolio" class="max-w-7xl mx-auto px-4 py-16 bg-gray-800">
+ <section id="portfolio" class="max-w-7xl mx-auto px-4 py-16 bg-gray-800">
     <h2 class="text-4xl font-bold mb-12 text-center">Loyihalarim</h2>
     <div class="grid md:grid-cols-3 gap-8">
       <!-- Birinchi loyiha -->
       <div class="relative group rounded overflow-hidden shadow-lg fade-in" style="animation-delay:0.2s;">
-        <img src="https:moxina_blog\static\post_images\rasm4.png" alt="Loyiha 1" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"/>
+        <img src="moxina_blog/static/post_images/rasm4.png" alt="Loyiha 1" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105 custom-filter"/>
         <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
           <p class="text-xl font-semibold">Loyiha 1</p>
         </div>
       </div>
       <!-- Ikkinchi loyiha -->
       <div class="relative group rounded overflow-hidden shadow-lg fade-in" style="animation-delay:0.4s;">
-        <img src="https:moxina_blog\static\post_images\rasm3.png" alt="Loyiha 2" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"/>
+        <img src="moxina_blog/static/post_images/rasm3.png" alt="Loyiha 2" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105 custom-filter"/>
         <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
           <p class="text-xl font-semibold">Loyiha 2</p>
         </div>
       </div>
       <!-- Uchinchi loyiha -->
       <div class="relative group rounded overflow-hidden shadow-lg fade-in" style="animation-delay:0.6s;">
-        <img src="moxina_blog\static\post_images\rasm1.png" alt="Loyiha 3" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"/>
+        <img src="moxina_blog/static/post_images/rasm1.png" alt="Loyiha 3" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105 custom-filter"/>
         <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
           <p class="text-xl font-semibold">Loyiha 3</p>
         </div>
       </div>
     </div>
-  </section>
-
+</section>
   <!-- Contact -->
   <section id="contact" class="max-w-7xl mx-auto px-4 py-16 bg-gray-900">
     <h2 class="text-4xl font-bold mb-8 text-center">Aloqa</h2>
